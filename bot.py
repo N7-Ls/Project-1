@@ -3,11 +3,11 @@ from discord.ext import commands
 import json
 import random, os, asyncio
 
-with open("setting.json",mode="r",encoding="utf-8") as jfile:
+with open(file='Setting.json',mode="r",encoding="utf-8") as jfile:
     jdata=json.load(jfile)
-    #開啟setting.json並讀取內容 方便之後直接取出預先設定好的資料
+    #開啟Setting.json並讀取內容 方便之後直接取出預先設定好的資料
 
-bot = commands.Bot(command_prefix="..")
+bot = commands.Bot(command_prefix="..")  
 
 @bot.event 
 async def on_ready():
@@ -16,9 +16,7 @@ async def on_ready():
 @bot.command() #help
 async def h(ctx):
     await ctx.send(
-    """`Need help?            
-Go ask somebody else! 
-I'm just a puppet     `"""
+    """`Hello there, need  any help?`"""
     )
 
 @bot.command() #Load-Cog
